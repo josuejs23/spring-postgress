@@ -33,6 +33,11 @@ public class UserController {
         return userRepository.findById(id).get();
     }
 
+    @GetMapping("/josue-ejemplo")
+    public String ejemploJosued() {
+        return "Hola soy josue";
+    }
+
     @PostMapping
     public User createUser(@RequestBody User user) {
         return userRepository.save(user);
