@@ -26,7 +26,10 @@ public class UserController {
         return userRepository.findAll();
     }
 
-
+    @GetMapping("/ejemplo")
+    public String ejemplo(){
+        return "ejemplo-Juan";
+    }
 
     @GetMapping("/{id}")
     public User getUserById(@PathVariable Long id) {
